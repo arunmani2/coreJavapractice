@@ -1,0 +1,32 @@
+package weekday1.class1;
+
+public class CharOccurences {
+
+	
+	public static void main(String[] args) {
+		
+		String str = "You have no choice other than following me!";
+		
+		int Count=0;
+		
+		char[] charact=str.toCharArray();
+		
+		int charlength=charact.length;
+		
+		for(int i=0;i<charlength;i++)
+		{
+		
+			if('o'==charact[i])
+			{
+				
+				Count++;
+			}
+		}
+		System.out.println(Count);
+		
+		
+		//char[] reverseofc = str.toCharArray();
+		
+		
+	}
+}
