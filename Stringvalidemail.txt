@@ -1,0 +1,43 @@
+package weekday1.class1;
+import java.util.regex.Matcher; 
+import java.util.regex.Pattern; 
+
+public class today {
+
+	    public static boolean isValid(String email) 
+	    { 
+	        String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\."+ 
+	                            "[a-zA-Z0-9_+&*-]+)*@" + 
+	                            "(?:[a-zA-Z0-9-]+\\.)+[a-z" + 
+	                            "A-Z]{2,7}$"; 
+	                              
+	        Pattern pat = Pattern.compile(emailRegex); 
+	        if (email == null) 
+	            return false; 
+	        return pat.matcher(email).matches(); 
+	    } 
+	  
+	    /* driver function to check */
+	    public static void main(String[] args) 
+	    { 
+	        String email = "naveen e@tl.com"; 
+	        if (isValid(email)) 
+	            System.out.print("Yes"); 
+	        else
+	            System.out.print("No"); 
+	    } 
+	} 
+
+
+
+
+/*
+1. Write a java program to verify whether the given String is valid email address.
+Input: "balaji.chandrasekaran@testleaf.com"
+output: true
+Input: "balaji.c@tunatap.co.uk"
+output: true
+Input: "naveen e@tl.com"
+output: false
+Note: Spl characters like . _ are only allowed*/
+
